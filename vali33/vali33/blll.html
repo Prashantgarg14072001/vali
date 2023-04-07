@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="pdf-upload-form" enctype="multipart/form-data">
+        <input type="file" id="pdf-file" name="pdf-file">
+        <button type="submit" id="upload-btn">Upload</button>
+      </form>
+      <div id="error-message"></div>
+      
+      
+      
+      <script>
+        const pdfUploadForm = document.querySelector("#pdf-upload-form");
+const pdfFileInput = document.querySelector("#pdf-file");
+const uploadBtn = document.querySelector("#upload-btn");
+const errorMessage = document.querySelector("#error-message");
+
+pdfUploadForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const pdfFile = pdfFileInput.files[0];
+
+  // Check if file is a PDF
+  if (!pdfFile.name.match(/\.(pdf)$/i)) {
+    errorMessage.textContent = "Please upload a PDF file";
+    return;
+  }
+
+  // Check if file size is greater than 10MB
+  if (pdfFile.size > 10000000) {
+    errorMessage.textContent = "File size should be less than 10MB";
+    return;
+  }
+
+  // If all validations pass, submit the form
+  pdfUploadForm.submit();
+  alert("Successfully Registered");
+});
+
+
+
+      </script>
+</body>
+</html>

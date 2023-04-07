@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        <!-- <label>
+            <input type="radio" name="gender" value="male">
+            Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female">
+            Female
+          </label> -->
+          
+          <label>
+            <input type="radio" name="gender" value="male" onkeyup="clearErrorMessage()">
+            Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female" onkeyup="clearErrorMessage()">
+            Female
+          </label>
+          <div id="error-message"></div>
+        <button type="submit">Submit</button>
+      </form>
+      
+
+      <script>
+        function validateForm() {
+  const radioButtonRegex = /^(male|female)$/;
+  const radioButtonInputs = document.getElementsByName('gender');
+  let radioButtonSelected = false;
+  for (let i = 0; i < radioButtonInputs.length; i++) {
+    if (radioButtonInputs[i].checked && radioButtonRegex.test(radioButtonInputs[i].value)) {
+      radioButtonSelected = true;
+      break;
+    }
+  }
+  if (!radioButtonSelected) {
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.innerHTML = 'Please select a gender.';
+    return false;
+  }
+  return true;
+}
+
+function clearErrorMessage() {
+  const errorMessage = document.getElementById('error-message');
+  errorMessage.innerHTML = '';
+}
+
+      </script>
+      
+</body>
+</html>

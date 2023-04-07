@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        <label for="agree">I agree to the terms and conditions</label>
+        <input type="checkbox" id="agree" name="agree" onkeyup="validateCheckbox()">
+        <button type="submit">Submit</button>
+      </form>
+      
+      <script>
+        function validateForm() {
+          var checkbox = document.getElementById("agree");
+          if (!checkbox.checked) {
+            alert("Please agree to the terms and conditions.");
+            return false;
+          }
+          return true;
+        }
+      
+        function validateCheckbox() {
+          var checkbox = document.getElementById("agree");
+          if (!checkbox.checked) {
+            checkbox.setCustomValidity("Please agree to the terms and conditions.");
+          } else {
+            checkbox.setCustomValidity("");
+          }
+        }
+      </script>
+      
+
+
+    <script>
+
+
+    </script>
+</body>
+</html>

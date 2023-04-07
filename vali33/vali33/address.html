@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="address">Enter your address:</label>
+        <input type="text" id="address" name="address" onkeyup="validateAddress()" required>
+        <div id="address-error"></div>
+        <button type="submit">Submit</button>
+      </form>
+
+      
+      <script>
+        function validateAddress() {
+  const addressInput = document.getElementById("address");
+  const addressRegex = /^[/\//a-zA-Z0-9\s,'-]*$/;
+  const addressError = document.getElementById("address-error");
+  
+  if (!addressRegex.test(addressInput.value)) {
+    addressInput.classList.add("invalid");
+    addressError.innerHTML = "Please enter a valid address.";
+  } else {
+    addressInput.classList.remove("invalid");
+    addressError.innerHTML = "";
+  }
+}
+
+
+
+
+      </script>
+</body>
+</html>
