@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration Form</title>
+  <!-- <link rel="stylesheet" type="text/css" href="VALIDATION.CSS"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@1&display=swap" rel="stylesheet"> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <style>
+    textarea.form-control {
+      width: 310px;
+    }
+
+    input#SrNo {
+      width: 260px;
+      left: 2;
+      margin-left: 4px;
+
+    }
+
+    .login {
+      background-color: bisque;
+    }
+
+    div#main {
+      background-color: blanchedalmond;
+    }
+
+    input#btncheck {
+      background-color: aqua;
+      margin: 20px;
+    }
+  </style>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="VALIDATION.JS">
+  </script>
+  <script src="http://code.angularjs.org/1.2.0/angular.min.js"></script>
+</head>
+
+<body>
+  <center>
+    <form action="index.html" onsubmit="return validate2()">
+      <div id="main">
+        <div class="h-tag">
+          <h2 style="margin-left:50px; font-size:30px; padding:10px">Create Account</h2>
+        </div>
+
+        <div class="login">
+          <table cellspacing="2" align="center" cellpadding="8" border="0">
+            <label align="right">First Name*:</label>
+            <input type="text" placeholder="Enter First Name here" maxlength="10" id="t3" class="tb"
+              oninput="firstname(this)" onkeyup="u4(this)" required/><br>
+
+            <span id="user3" style="color:red"></span>
+            <br>
+            <br>
+            <label align="right">Last Name*:</label>
+            <input type="text" placeholder="Enter Last Name here" maxlength="8" id="t8" class="tb" oninput="bcd(this)"
+              onkeyup="u7(this)" required/><br>
+            <span id="user8" style="color:red"></span>
+            <br>
+            <label align="right">Full Name*:</label>
+            <input type="text" placeholder="Enter Full Name here" maxlength="20" id="t1" class="tb" oninput="abc(this)"
+              onkeyup="u1(this)" required/><br>
+            <span id="user1" style="color:red;"></span>
+
+            <br>
+            <br>
+            
+
+            <label align="right">Email ID*:</label>
+            <input type="text" placeholder="Enter Email ID here" id="t2" class="tb" maxlength="30" oninput="fun10(this)"
+              onkeyup="u2(this)" required><br>
+            <span id="user2" style="color:red"></span>
+            <br>
+            <br>
+
+            <label align="right"> Password*:</label>
+            <input type="password" placeholder="Enter Password here" id="t4" maxlength="10" class="tb"
+              oninput="funny(this)" onkeyup="u3(this)" required><br>
+
+            <span id="passwords" style="color:rgb(240, 157, 157)"></span>
+            <br><br>
+
+            <label>country*</label>
+            <select name="country" onchange="countrycodevalidation()" id="country1" maxlength="20" id="t1" class="tb">
+              <option value="select">Select</option>
+              <option value="india">india</option>
+              <option value="srilanka">srilanka</option>
+              <option value="nepal">nepal</option>
+              <option value="pakistan">pakistan</option>
+            </select>
+            <br>
+            <br>
+
+            <label>country code*</label>
+            <input type="text" id="countrycode" placeholder="Enter country code here" maxlength="20" id="t1" class="tb"
+              readonly />
+
+            <br>
+            <br>
+
+            <label>Mobile Number*</label>
+            <input  placeholder="Enter Your Phone Number" type="tel" maxlength="10" id="txtName"  required/>
+            <span class="errormsg" id="errormsg" style="color: red"></span>
+  
+            <br><br>
+
+            <label align="right">Gender*:</label>
+            <label></label>
+            <input type="radio" value="Male" name="gender" id="t6" /><label>Male</label>
+            <input type="radio" value="Female" name="gender" id="t6" /><label>Female</label>
+            <input type="radio" value="Other" name="gender" id="t6" /><label>Other</label><br>
+
+            <span id="user4" style="color:red"></span>
+            <br><br>
+
+           
+
+            <div class="formdesig my-4" id="hobbies">
+              <label>Hobbies*</label>
+              <br />
+              <input type="checkbox" id="h1" name="watching movies" value="watching movies" />
+              <label for="h1">watching movies</label>
+              <br />
+              <input type="checkbox" id="h2" name="Cricket" value="Cricket" />
+              <label for="h2">Cricket</label>
+              <br />
+              <input type="checkbox" id="h3" name="playing game" value="playing game" />
+              <label for="h3">playing game</label>
+              <br />
+            </div>
+
+            <label id="large"><b>Upload the any image(Only .file .doc allowed)<sup style="color: rgb(230, 146, 146)">*</sup></b></label><br>
+            <input type="file" id="file" onchange="return fileValidation()" multiple accept=".doc, .pdf"  required/>
+            <button id="btn-file-reset-id" type="button">x</button>
+  
+            <br>
+            <br>
+
+            <label id="large"><b>Upload the text file(Only .jpg allowed)<sup style="color: rgb(190, 107, 107)">*</sup></b></label><br>
+            <input type="file" id="text" onchange="return fileValidation1()" multiple accept=".jpg,"  required/>
+            <button id="btn-text-reset-id" type="button">x</button>
+          </br>
+
+            
+            <div class="formdesign my-4" id="Describe your self" (max. 50 word.)>
+              <label>Describe your self* max. 50 word</label>
+              <br />
+              <textarea class="form-control" minlength="1" maxlength="300" type="textarea"
+                placeholder="Enter your self" rows="5" col="50" name="Describe your self" required></textarea>
+                
+        
+        
+            <br><br>
+
+
+            
+
+            <div ng-app="">
+              <input type="checkbox" id="check" name="isAgreed" ng-model="isAgreed" required><br>
+            </div>
+            <input type="submit" value="Submit" id="btncheck" ng-disabled="!isAgreed" class="btn">
+
+
+
+        </div>
+      </div>
+    </form>
+  </center>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

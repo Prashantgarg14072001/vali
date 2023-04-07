@@ -1,0 +1,51 @@
+body{
+    background-image: url('bgm1.jpg');
+    background-attachment: fixed;
+    font-weight: 2px;
+   
+    
+}
+.ftext{
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(97, 89, 89);
+
+}
+.main-container{
+    font-family: 'Times New Roman', Times, serif;
+    height: 100%;
+    width: 100%;
+    border-radius: 44px;
+    border: 2px rgb(12, 73, 143);
+    color: rgba(108, 233, 233, 0.935);
+
+}
+.sub1{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 100px;
+    margin-left: 250px;
+    border: 2px solid;
+    height: 450px;
+    width: 980px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+.btn{
+    
+   
+    border-color:rgb(107, 204, 236) blue color(52, 136, 118);
+    color: blue (14, 117, 83);
+    height: 30px;
+    width: 70px;
+    background-color: gray (90, 190, 157);
+    border-radius: 4px;
+    margin-top: 4px;
+}
+.btnbox{
+    display: flex;
+    margin-left: 250px;
+    height: fit-content;
+    width: 990px;
+    justify-content: space-between;
+}
