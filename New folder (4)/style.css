@@ -1,0 +1,797 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&family=Nunito&family=Roboto&family=Ubuntu:ital,wght@0,300;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:ital,wght@0,300;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&family=Roboto&family=Ubuntu:ital,wght@0,300;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&family=Nunito&family=Roboto&family=Ubuntu:ital,wght@0,300;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.outer{
+    width:100%;
+    min-height: 100%;
+    background-image: url('images/gff.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#btt{
+    background: linear-gradient(180deg,#51D2FC,#0099DC);
+    border-radius: 30px;
+    border: none;
+    width: 180px;
+    height: 40px;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.bt{
+    border-radius: 30px; 
+    width: 180px; 
+    margin-left: 2%;
+    height: 40px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+}
+.nav-link{
+    color: #FFFFFF;
+    margin-left: 1.2vw;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: -.8em;
+
+}
+
+.logo{
+    margin-left: 1vw;
+    margin-top: 0vw;
+}
+
+.logo-P{
+    display: inline;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 2.2rem;
+    color: #FFFFFF;
+   
+}
+#slide_text{
+    color:#FFFFFF;
+    font-family: DM Sans;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: 0em;
+    font-family: Roboto;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    font-family: Nunito;
+    font-size: 3.5em;
+    font-weight: 600;
+    line-height: 72px;
+    letter-spacing: 0em;
+}
+#text2{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+@media only screen and (max-width:280px){
+    #slide_text{
+        font-size: 2em;
+        text-align: center;
+        line-height: 1.2em;
+    }
+    .bt{
+        margin-top: .8em;
+        margin-bottom: .8em;
+    }
+}
+.slide1{
+    margin-right: -0.6em;
+    filter: blur(10px);
+}
+.slide2{
+    position: absolute;
+    left: 40em;
+    top: 25em;
+}
+.slide3{
+    position: absolute;
+    left: 40em;
+    filter: blur(10px);
+}
+.slide4{
+    position: absolute;
+    left: 20em;
+    bottom: -1.5em;
+    filter: blur(5px);
+    z-index: 1;
+}
+.slider{
+    margin-bottom: 10em;
+}
+.slider12{
+    margin-bottom: 10em;
+}
+@media(max-width:767px){
+    .slide2{
+        display: none;
+    }
+    .slide3{
+        display: none;
+    }
+    .slide4{
+        display: none;
+    }
+    .slide1{
+        margin-top: 30em;
+    }
+}
+@media only screen and (width:1024px) {
+ .slide2{
+    position: absolute;
+    left: 25em;
+    bottom: 10em;
+ }
+ .slide3{
+    position: absolute;
+    left: 25em;
+    
+ }
+ .slide4{
+    position: absolute;
+    bottom: -16em;
+    left: 15em;
+}
+}
+@media only screen and (width:768px) {
+    .slide2{
+       position: absolute;
+       left: 25em;
+       bottom: 22em;
+    }
+    .slide3{
+       position: absolute;
+       left: 30em;
+       
+    }
+    .slide4{
+       position: absolute;
+       bottom: -3.5em;
+       left: 35em;
+   }
+   .slide1{
+    margin-top: 20em;
+   }
+   }
+@media only screen and (width:820px) {
+    .slide2{
+       position: absolute;
+       left: 25em;
+       bottom: 40em;
+    }
+    .slide3{
+       position: absolute;
+       left: 20em;
+       
+    }
+    .slide4{
+       position: absolute;
+       bottom: 9.5em;
+       left: 35em;
+   }
+   .slide1{
+    margin-top: 20em;
+   }
+   }
+   @media only screen and (width:912px) {
+    .slide2{
+       position: absolute;
+       left: 40em;
+       bottom: 45em;
+    }
+    .slide3{
+       position: absolute;
+       left: 40em;
+       
+    }
+    .slide4{
+       position: absolute;
+       bottom: 19em;
+       left: 45em;
+   }
+   .slide1{
+    margin-top: 20em;
+   }
+   }
+.about_section{
+    width:100%;
+    height: 100%;
+    background-image: url('images/pure-white-background-85a2a7fd.jpg');
+    background-size: cover;
+}
+.about_sectionPart1{
+    font-family: Roboto;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 72px;
+    letter-spacing: 0em;
+}
+.about_sectionPart12{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.about_sectionPart3{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-left: -3.5em;
+}
+
+@media only screen and (max-width:280px){
+   .about_sectionPart1{
+    font-size: 2em;
+    line-height: 1em;
+   }
+   .about_sectionPart12{
+    padding: 1px;
+    font-size: 1em;
+   }
+}
+.sub{
+    background-image: url('images/bgImage2.png');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    padding-bottom: 4em;
+    background-repeat: no-repeat;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.set1{
+    font-family: Roboto;
+font-size: 3.3em;
+font-weight: 800;
+line-height: 72px;
+letter-spacing: 0em;
+margin-left: .6em;
+padding-top: .2em;
+}
+.set2{
+    font-family: Poppins;
+font-size: 18px;
+font-weight: 400;
+line-height: 27px;
+letter-spacing: 0em;
+text-align: left;
+color: #FFFFFF;
+margin-left: 15%;
+margin-top: -37px;
+}
+
+.get2{
+   margin-top: 30px;
+}
+@media only screen and (min-width:768px) and (max-width:912px){
+    .set3{
+        padding-top: 10em;
+     }
+}
+@media only screen and (max-width:1024px) {
+    .set1{
+        font-size: 2em;
+        line-height: 1.2em;
+        text-align: center;
+        margin-top: 3em;
+    }
+    .set2{
+        margin-left: 5em;
+    }
+    
+}
+.serviceCenter{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.serviceCenter1{
+    font-family: Roboto;
+    font-size: 3.4em;
+    font-weight: 800;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 3em;
+}
+.serviceCenterImage{
+    padding-bottom: 2em;
+    padding-top: 2em;
+      
+}
+
+@media only screen and (min-width:300px) and (max-width:762px) {
+    .serviceCenter1{
+        font-size: 2em;
+        line-height: 1.2em;
+        text-align: center;
+        
+    }
+    .serviceCenterImage{
+        padding-bottom: 2em;
+        margin: 23px 110px 0;
+    }
+   
+}
+@media only screen and (min-width:440px) and (max-width:912px) {
+    .serviceCenterImage{
+        /* margin-top: 30em; */
+          padding-top: 18em;
+
+    }
+   
+}
+.vet{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/whiteBlur.png');
+    background-size: cover;
+    padding-bottom: 2em;
+}
+.vet1{
+    margin-top: 2em;
+}
+.vet2{
+    font-family: Roboto;
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: left;     
+}
+.vet3{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;    
+}
+.vet4{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;    
+}
+@media only screen and (min-width:440px) and (max-width:912px) {
+    .vet1{
+        /* margin-top: 30em; */
+          padding-top: 7em;
+
+    }
+   
+}
+.inbt-text{
+    font-family: Roboto;
+font-size: 3.5;
+font-weight: 800;
+line-height: 72px;
+letter-spacing: 0em;
+
+}
+.profileCard{
+    background-image: url('images/bgImage3.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.profileItem{
+    Width:180px;
+    Height:180px;
+    background-image: url('images/twittershap.png');
+    background-size: cover;
+}
+.profileItemImage{
+    margin-top: 0%;
+}
+.profileItem1{
+    height: 180px;
+    width:180px;
+    background-image: url('images/instashap.png');
+    background-size: cover;
+}
+.profileItem2{
+    height: 180px;
+    width:180px;
+    background-image: url('images/discordshap.png');
+    background-size: cover;
+    padding-top: -1em;
+}
+.profileItem3{
+    height: 180px;
+    width:180px;
+    background-image: url('images/youtubeshap.png');
+    background-size: cover;
+    padding-top: -1em;
+}
+.profileItem4{
+    height: 180px;
+    width:180px;
+    background-image: url('images/fbshap.png');
+    background-size: cover;
+    padding-top: -1em;
+}
+@media only screen and (min-width:300px) and (max-width:767px){
+    .profileCard{
+        background-image: url('images/bgImage3.png');
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .profileItem{
+        height: 100%;
+        width:100%;
+        background-image: url('images/twittershap.png');
+        background-size: cover;
+    }
+    .profileItem1{
+        height: 100%;
+        width:100%;
+        background-image: url('images/instashap.png');
+        background-size: cover;
+    }
+    .profileItem2{
+        height: 100%;
+        width:100%;
+        background-image: url('images/discordshap.png');
+        background-size: cover;
+    }
+    .profileItem3{
+        height: 100%;
+        width:100%;
+        background-image: url('images/youtubeshap.png');
+        background-size: cover;
+    }
+    .profileItem4{
+        height: 100%;
+        width:100%;
+        background-image: url('images/fbshap.png');
+        background-size: cover;
+    }
+}
+.landPart{
+    font-family: Roboto;
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 1.1em;
+    letter-spacing: 0em;
+}
+.landText{
+    font-family: Roboto;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    color: black;
+}
+@media only screen and (max-width:440px) {
+    .landPart{
+        font-size: 2em;
+        line-height: 1.1em;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:762px){
+    .profileItemImage{
+        margin-top: 25%;
+    }
+}
+.profileItemText5{
+    padding-top: 0em;
+    margin-left: 0em;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    
+}
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .profileCard{
+        background-image: url('images/bgImage3.png');
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .profileItem{
+        height: 250px;
+        width:150px;
+        background-image: url('images/twittershap.png');
+        background-size: cover;
+        margin-left: -2em;
+    }
+    .profileItemImage{
+        padding-top: 2.5em;
+        margin-left: 3em;
+    }
+    .profileItemText{
+        padding-top: 0em;
+        margin-left: 2.5em;
+    }
+    .profileItem1{
+        height: 100%;
+        width:150px;
+        background-image: url('images/instashap.png');
+        background-size: cover;
+        margin-left: -2em;
+    }
+    
+    .profileItemText1{
+        padding-top: 0em;
+        margin-left: 2.6em;
+    }
+    .profileItem2{
+        height: 100%;
+        width:150px;
+        background-image: url('images/discordshap.png');
+        background-size: cover;
+        margin-left: -2em;
+    }
+    .profileItemText2{
+        padding-top: 0em;
+        margin-left: 3em;
+    }
+    .profileItem3{
+        height: 100%;
+        width:150px;
+        background-image: url('images/youtubeshap.png');
+        background-size: cover;
+        margin-left: -2em;
+    }
+    .profileItemText3{
+        padding-top: 0em;
+        margin-left: 2.7em;
+    }
+    .profileItem4{
+        height: 100%;
+        width:150px;
+        background-image: url('images/fbshap.png');
+        background-size: cover;
+        margin-left: -2em;
+    }
+    .profileItemText4{
+        padding-top: 0em;
+        margin-left: 2.6em;
+    }
+    .profileItemText5{
+        padding-top: 0em;
+        margin-left: 2em;
+        
+    }
+}
+/* @media (min-width: 768px){
+.col-md-2 {
+    flex: 0 0 auto;
+    
+}
+} */
+
+.team{
+    font-family: 'Roboto';
+    font-size: 3.5em;
+    font-weight: 900;
+    line-height: 72px;
+    letter-spacing: 0em;
+    color: black;    
+}
+@media only screen and (max-width:440px) {
+    .team{
+        font-size: 2em;
+        line-height: 1.1em;
+    }
+}
+
+.profit{
+    position: absolute;
+}
+.profit1{
+   
+    margin-top: -50em;
+    z-index: 5;
+}
+@media only screen and (max-width:980px) {
+    .profit1{
+        margin-top: -50em;
+    }
+    .profite4{
+       padding-top: 10vw;
+    }
+}
+.upparFooter{
+    background-image: url('images/whiteBlur.png');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.upparFooterPart{
+    font-family: Roboto;
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-align: left;    
+}
+@media only screen and (max-width:980px) {
+    .upparFooterPart{
+        font-size: 2em;
+        line-height: 1.1em;
+    }
+}
+.lowerFoot{
+    background-image: url('images/bgImage3.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin-top: -3em;
+}
+@media only screen and (max-width:980px) {
+    .lower1{
+        font-size: 2em;
+    }
+    .lower2{
+        font-size: 2em;
+    }
+    .lower3{
+        font-size: 2em;
+    }
+}
+.logo22{
+    margin-left: -.5em;
+    margin-top: -1em;
+}
+
+.profileCard11{
+    background-image: url('images/Rectangle_white.png');
+    background-size: cover;
+    height: 455px;
+    width: 240px;
+}
+.profileCard1{
+    background-image: url('images/Rectangle_blur.png');
+    background-size: cover;
+    height: 455px;
+    width: 240px;
+}
+@media only screen and (min-width:280px) and (max-width:767px){
+    .socailLife{
+        margin-left: 7em;
+    }
+    .profileCard11{
+        background-image: url('images/Rectangle_white.png');
+        background-size: cover;
+        height: 455px;
+        width: 240px;
+        margin: 10px auto 0;
+    }
+    .profileCard1{
+        background-image: url('images/Rectangle_blur.png');
+        background-size: cover;
+        height: 455px;
+        width: 240px;
+        margin: 10px auto 0;
+    }
+}
+.faqPart{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    color: #000;    
+}
+.faqPart1{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: #000;
+}
+.profileText{
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;   
+    margin-top: -.8em; 
+}
+.profileText1{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;    
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+.profileText2{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 7px;
+    letter-spacing: 0em;
+    text-align: center; 
+    width: 200px;
+}
+.bttn{
+    border-radius: 30px; 
+     width: 180px;
+     background: linear-gradient(180deg,#51D2FC,#0099DC);
+     height: 40px;
+}
+.prop{
+    margin-top: -.9em;
+    height: 250px;
+    width: 250px;
+}
+.image15{
+    height: 13.3vw;
+    margin: 0.15vw;
+}
+
+.div-imgs{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image17{
+    height: 27vw;
+    margin: 0.15vw;
+}
+
+.image18{
+    width: 26.5vw;
+    margin: 0.15vw;
+}
+
+.image19{
+    height: 13.6vw;
+    margin: 0.15vw;
+}
+@media only screen and (min-width:300px) and (max-width:762px){
+    .lastfoot{
+        text-align: center;
+    }
+}
