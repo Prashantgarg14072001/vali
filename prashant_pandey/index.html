@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <form id="form" onsubmit="validate()">
+            <h1 class="header">Registration</h1>
+            <div class="input-control">
+                <label for="username">Username: </label>
+                <input id="username" onkeyup="fullName()" class="form-control" name="username" 
+                type="text" autocomplete="off" required> 
+                <div class="error"></div>
+                  <span id="fullName" class="textColor"></span>
+            </div>
+           <div class="input-control">
+                <label for="firstname">Firstname: </label>
+                <input id="fname" onkeyup="firstName()" name="fname" type="text" autocomplete="off" required>
+                <div class="error"></div>
+                  <span id="firstName" class="textColor"></span>
+            </div>
+              <div class="input-control">
+                <label for="username">Lastname: </label>
+                <input id="lname" onkeyup="lastName()" name="lname" type="text" autocomplete="off" required>
+                <div class="error"></div>
+                  <span id="lastName" class="textColor"></span>
+            </div>
+          <div class="form-control">
+                <label for="email">Email</label>
+                <input id="email" onkeyup="emailFunc()" name="email" type="text" required>
+                <div class="error"></div>
+                <span id="emailFunc" class="textColor"></span>
+            </div>
+              <div class="form-control">
+              <label for="date">Date Of Birth:</label>
+              <input id="dob" name="dob" type="date" min="1950-01-01" max="2010-01-01" required>
+              <div class="error"></div>
+              <span id="dateofbirth" class="textColor"></span>
+          </div>
+            <div class="input-control">
+                <label for="country-select">Select your country:</label>
+                <select id="country-select">
+                  <option value="">--Please select a country--</option>
+                  <option value="us">United States</option>
+                  <option value="vietnam">Vietnam</option>
+                  <option value="india">India</option>
+                  <option value="china">China</option>
+                  <option value="uae">UAE</option>
+                </select>
+                <label for="phone-input">Enter your phone number:</label>
+                <div class="form-control">
+                  <input type="text" id="code-input" name="code" readonly required>
+                  <input type="tel" id="phone-input" name="phone" minlength="10" maxlength="10" required>
+                </div>
+            </div>
+           <div class="input-control form-control">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password" onkeyup="passwordValidation()" required>
+                <i class="fa fa-eye-slash" aria-hidden="true" onclick="showPass()"></i>
+                <span id="passVal" class="textColor"></span>
+                <div class="error"></div>
+            </div>
+            
+          <div class="input-control">
+                <label for="password2">Confirm Password: </label>
+                <input id="password2"name="password2" onkeyup="passwordValidation2()" type="password" required>
+                <div class="error"></div>
+                <i class="fa fa-eye-slash" aria-hidden="true" onclick="showPass2()"></i>
+                <span id="passVal2" class="textColor"></span>
+            </div>
+               <div class="form-control">
+                <label for="photo">Profile Picture :</label>
+                <input type="file" id="file" onchange="return fileValidation()" required>
+                <div id="imagePreview"></div>
+            </div> 
+             <div class="form-control">
+              <label for="photo">Resume:</label>
+              <input type="file" id="pdf-file-input" onkeyup="validatePdfFile()" required>
+              
+              <p id="pdf-file-validation-message"></p>
+            </div>
+            <button id="pdf-file-submit">Browser</button>
+            
+            
+            
+         <div class="input-control">
+                <label for="address">Address: <span class="star">*</span> </label>
+                <input type="text" id="address" onkeyup="fullAddress()" placeholder="enter name" required>
+                <span id="fulladd" class="textColor"></span>
+            </div>
+            <label for="language-dropdown">Select your language:</label>
+            <select id="language-dropdown" name="language" onkeyup="validateLanguageSelection()">
+              <option value="">Please select</option>
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="es">Spanish</option>
+              <option value="de">German</option>
+              <option value="it">Italian</option>
+            </select>
+              
+            <div class="form-control">
+                <div class="" onkeyup="genderCheck()">
+                    <label for="numeric">Select Gender<span class="star">*</span></label>
+                    <br>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" onclick="fetchData()">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" onclick="fetchData()">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+            <div id="sectionForm">
+                <h3></h3>
+                <label for="numeric">Please select at least one item<span class="star">*</span></label>
+                <br>
+                Sports: <input type="checkbox" name="section" value="sports"> &nbsp;
+                Business: <input type="checkbox" name="section" value="business"> &nbsp;
+                Health: <input type="checkbox" name="section" value="health"> &nbsp;
+                Society: <input type="checkbox" name="section" value="society"> &nbsp;
+            </div>
+            <div class="input-control">
+                <label for="search">Search Field<span class="star">*</span></label>
+                <input onkeyup="searchValidation()" id="search" name="search" type="text"  placeholder="search" required>
+                <i class="fa fa-eye-slash searchIcon" aria-hidden="true" onclick="searchPass()"></i>
+                <span id="searchAns" class="textColor"></span>
+            </div>
+            <br>
+
+            <div class="input-control">
+                <label for="numeric">Text Field<span class="star">*</span></label>
+                <input id="text" name="text" type="text" onkeyup="textFieldValidation()" required>
+                <span id="textAns" class="textColor"></span>
+            </div>
+
+            <div class="input-control">
+                <label for="numeric">URL<span class="star">*</span></label>
+                <input id="url" name="url" type="url" onkeyup="urlValidation()" required>
+                <span id="urlAns" class="textColor"></span>
+            </div>      
+            <button type="submit" >Sign Up</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+    
+
+</body>
+</html>

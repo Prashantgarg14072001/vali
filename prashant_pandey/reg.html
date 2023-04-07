@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <body>
+        <div class="bg-video-wrap">
+          <video src="production ID_4354035.mp4" loop muted autoplay height="1350px" >
+          </video>
+                <div class="container overlay">
+                    <div class="row">
+                        <h1 class="text-light text-center" style="margin-bottom: -.5em;">Registration Page</h1>
+                        <form id="form" onsubmit="validate()">
+                          <div class="col-md-8 offset-2 myform">
+                            <div class="col-md-6">
+                                <div class="row align-items-center mb-3 px-3">
+                                        <label for="username" class="col-form-label text-light h1">UserID: </label>
+                                      <div class="col-12"><span><i class="fa-solid fa-users fontStyle" aria-hidden="true" ></i>  </span>
+                                    <input type="text" name="uname" id="username" class="form-control" placeholder="Enter UserName...."
+                                     onkeyup="fullName()"  autocomplete="off" required style="color: black; padding-left: 3.2em;"> 
+                                    <div class="error"></div>
+                                      <span id="fullName" class="textColor"></span>
+                                    </div>
+                                </div> 
+                               <div class="row align-items-center mb-3 px-3">
+                                    <label for="firstname" class="col-form-label text-light h1">FirstName: </label>
+                                  <div class="col-12"><span><i class="fa-solid fa-user-secret fontStyle" aria-hidden="true" ></i> </span>
+                                    <input id="fname" onkeyup="firstName()" name="fname" class="form-control" type="text"placeholder="Enter FirstName...."
+                                     autocomplete="off" required style="color: black; padding-left: 3.2em;">
+                                    <div class="error"></div>
+                                      <span id="firstName" class="textColor"></span>
+                                </div>
+                            </div> 
+                          <div class="row align-items-center mb-3 px-3">
+                                <label for="lastname" class="col-form-label text-light h1">LastName: </label>
+                              <div class="col-12"><span><i class="fa-solid fa-user-nurse fontStyle" aria-hidden="true"></i>  </span>
+                                <input id="lname" onkeyup="lastName()" name="lname" type="text" autocomplete="off" required  class="form-control" placeholder="Enter UserName...."
+                                autocomplete="off" style="color: black; padding-left: 3.2em;">
+                            <div class="error"></div>
+                              <span id="lastName" class="textColor"></span>
+                            </div>
+                        </div> 
+                        <div class="row align-items-center mb-3 px-3">
+                            <label for="email" class="col-form-label text-light h1">Email: </label>
+                          <div class="col-12"><span><i class="fa-solid fa-envelope-circle-check fontStyle" aria-hidden="true" ></i>  </span>
+                            <input id="email" onkeyup="emailFunc()" name="email" type="text" autocomplete="off" required  class="form-control" placeholder="Enter Email...."
+                            autocomplete="off" style="color: black; padding-left: 3.2em;">
+                        <div class="error"></div>
+                        <span id="emailFunc" class="textColor"></span>
+                        </div>
+                    </div>  
+                      <div class="row align-items-center mb-3 px-3">
+                        <label for="date" class="col-form-label text-light h1">Date Of Birth: </label>
+                      <div class="col-12"><span><i class="fa-solid fa-calendar fontStyle" aria-hidden="true" ></i>  </span>
+                        <input id="dob" name="dob" type="date" min="1950-01-01" max="2010-01-01" class="form-control" required 
+                        style="color: black; padding-left: 3.2em;">
+                        <div class="error"></div>
+                        <span id="dateofbirth" class="textColor"></span>
+                    </div>
+                </div> 
+                 <div class="row align-items-center mb-3 px-3">
+                    <label for="country-select" class="col-form-label text-light h1">Select your country: </label>
+                  <div class="col-12"><span><i class="fa-solid fa-earth-africa fontStyle" aria-hidden="true" ></i>  </span>
+              
+                    <div class="row align-items-center mb-3 px-3">
+                        <select id="country-select" class="form-control" style="padding-left: 3.2em;">
+                          <option value="">--Please select a country--</option>
+                          <option value="us">United States</option>
+                          <option value="vietnam">Vietnam</option>
+                          <option value="india">India</option>
+                          <option value="china">China</option>
+                          <option value="uae">UAE</option>
+                        </select>
+                        <label for="phone-input" class="col-form-label text-light h1">Enter your phone number:</label>
+                       
+                        <div class="form-control">
+                            <input type="text" id="code-input" class="form-control" name="code" readonly >
+                          <input type="tel" id="phone-input"class="form-control mt-1" name="phone" minlength="10" maxlength="10" required>           
+                        </div>
+                      </div>
+                   </div>
+                </div> 
+             
+                    <div class="row align-items-center mb-3 px-3" style="margin-top: -1.5em;">
+                            <label for="password" class="col-form-label text-light h1"> Password </label>
+                          <div class="col-12"><span><i class="fa-solid fa-lock-open fontStyle" aria-hidden="true" ></i>  </span>
+                            <input id="password"name="password" type="password" onkeyup="passwordValidation()" required class="form-control" placeholder="Enter Password...."
+                            style="color: black; padding-left: 3.2em;">
+                            <i class="fa fa-eye-slash rounded float-end" aria-hidden="true" onclick="showPass()" style="margin-top: -1.7em;padding-right: 1em;"></i>
+                            <span id="passVal" class="textColor"></span>
+                            <div class="error"></div>
+                        </div>
+                    </div>  
+                    <div class="row align-items-center mb-3 px-3">
+                        <label for="password" class="col-form-label text-light h1"> Confirm Password </label>
+                        <div class="col-12"><span><i class="fa-solid fa-key fontStyle" aria-hidden="true" ></i>  </span>
+                        <input id="password2"name="password2" onkeyup="passwordValidation2()" type="password" required class="form-control" placeholder="Enter Password...."
+                        style="color: black; padding-left: 3.2em;">
+                        <div class="error"></div>
+                        <i class="fa fa-eye-slash float-end" aria-hidden="true" onclick="showPass2()"  style="margin-top: -1.7em; padding-right: 1em;"></i>
+                        <span id="passVal2" class="textColor"></span>
+                    </div>
+                </div>  
+                    
+                     <div class="row align-items-center mb-3 px-3">
+                        <label for="photo" class="col-form-label text-light h1">Profile Picture :</label>
+                        <div class="col-12"><span><i class="fa-solid fa-images fontStyle" aria-hidden="true" style="height: 43px;" ></i></span>
+                            <div class="form-control" style="padding-left: 4em;">
+                                <input type="file" id="file" onchange="return fileValidation()" required>
+                                <div id="imagePreview"></div>
+                            </div> 
+                    </div> 
+                  </div>
+               </div>
+               <div class="col-md-6">
+                <div class="row align-items-center mb-3 px-3">
+                  <label for="photo" class="col-form-label text-light h1">Resume :</label>
+              
+                      <div class="form-control">
+                        <input type="file" id="pdf-file-input" onkeyup="validatePdfFile()" required>
+                        <p id="pdf-file-validation-message"></p>
+                      </div>
+                      <button id="pdf-file-submit" style="width: 80px; margin-top: 1em;">Browser</button>
+                      </div> 
+                <div class="row align-items-center mb-3 px-3">
+                        <label for="address" class="col-form-label text-light h1">Address: </label>
+                      <div class="col-12">
+                        <textarea ype="text" class="form-control" id="address" onkeyup="fullAddress()" placeholder="enter name" required rows="8"></textarea>
+                        <span id="fulladd" class="textColor"></span>
+                    </div>
+                </div> 
+                <div class="row align-items-center mb-3 px-3">
+                        <label for="language-dropdown" class="col-form-label text-light h1">Select your language: </label>
+                      <div class="col-12"><span><i class="fa-solid fa-language fontStyle" aria-hidden="true" ></i>  </span>
+                        <select id="language-dropdown" class="form-control" name="language" onkeyup="validateLanguageSelection()" style="padding-left: 3.2em;">
+                          <option value="">----Please select ---- </option>
+                          <option value="en">English</option>
+                          <option value="fr">French</option>
+                          <option value="es">Spanish</option>
+                          <option value="de">German</option>
+                          <option value="it">Italian</option>
+                        </select>
+                    </div>
+                </div> 
+              
+                <div class="row align-items-center mb-3 px-3">
+                        <label for="numeric" class="col-form-label text-light h1">Select Gender: </label>
+                          <div class="" onkeyup="genderCheck()">
+                        <label for="male" class="col-form-label text-light h1">Male</label>
+                        <input type="radio" id="male" name="gender" onclick="fetchData()">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="female" class="col-form-label text-light h1">Female</label>
+                        <input type="radio" id="female" name="gender" onclick="fetchData()">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div> 
+                
+                <div class="row align-items-center mb-3 px-3">
+                        <label for="username" class="col-form-label text-light h1">Please select at least one item: </label>
+                        <div id="sectionForm">
+                        <span style="color: #fff;"> Sports:</span>  <input type="checkbox" name="section" value="sports"> &nbsp;
+                        <span style="color: #fff;">Business:</span> <input type="checkbox" name="section" value="business"> &nbsp;
+                        <span style="color: #fff;"> Health: </span><input type="checkbox" name="section" value="health"> &nbsp;
+                        <span style="color: #fff;">Society:</span> <input type="checkbox" name="section" value="society"> &nbsp;
+                    </div>
+                </div> 
+                <div class="row align-items-center mb-3 px-3">
+                  <label for="search" class="col-form-label text-light h1">Search Field: </label>
+                  <div class="col-12"><span><i class="fa-solid fa-magnifying-glass-plus fontStyle" aria-hidden="true"></i>  </span>
+                  <input onkeyup="searchValidation()" id="search" name="search" type="text"  placeholder="search" class="form-control" required style="color: black; padding-left: 3.2em;">
+                  <i class="fa-solid fa-magnifying-glass float-end" aria-hidden="true" onclick="searchPass()" style="margin-top: -1.7em; padding-right: 1em;"></i>
+                  <span id="searchAns" class="textColor"></span>
+                    </div>
+                </div> 
+                <div class="row align-items-center mb-3 px-3">
+                        <label for="text" class="col-form-label text-light h1">Text Field: </label>
+                      <div class="col-12"><span><i class="fa-solid fa-text-width fontStyle" aria-hidden="true" ></i>  </span>
+                    <input type="text" name="uname" id="text" class="form-control" onkeyup="textFieldValidation()" placeholder="Enter UserName...." style="color: black; padding-left: 3.2em;">
+                    <span id="textAns" class="textColor"></span>
+                    </div>
+                </div> 
+                <div class="row align-items-center mb-3 px-3">
+                        <label for="username" class="col-form-label text-light h1">URL: </label>
+                      <div class="col-12"><span><i class="fa-solid fa-map-location-dot fontStyle" aria-hidden="true"></i>  </span>
+                    <input id="url" name="url" type="url" onkeyup="urlValidation()" required class="form-control" placeholder="Enter UserName...." style="color: black; padding-left: 3.2em;">
+                    <span id="urlAns" class="textColor"></span>
+                    </div>
+                </div> 
+            </div>   
+          </div>
+          <div class="col-md-6 offset-2 py-5 px-2">
+            <button type="submit" value="submit" class="btn bg-info btn text-light text-lg-center h1" style="width: 150px; border-radius: 50px;">Submit</button>
+          </div>
+                  </form>
+          </div>
+         
+          
+        </div>
+      </body>
+      <script src="index.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>  
+</body>
+</html>
